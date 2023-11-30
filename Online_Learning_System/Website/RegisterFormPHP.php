@@ -1,4 +1,5 @@
 <?php
+include 'RegisterForm.php';
 function verify($username, $password, $email, $contactnumber)
 {
     $errors = array(); // Create an array to store validation error messages
@@ -24,15 +25,15 @@ function verify($username, $password, $email, $contactnumber)
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['passwordhash'];
+    $username = $_POST['UserName'];
+    $password = $_POST['Password'];
     $email = $_POST['Email'];
     $contactnumber = $_POST['ContactNumber'];
 
     $errors = verify($username, $password, $email, $contactnumber); // Call the function and store the errors
 
     if (empty($errors)) {
-        $servername = "127.0.0.1";
+        $servername = "localhost";
         $user = "root";
         $pass = "";
         $dbName = "online_learning_system";
@@ -44,27 +45,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         $insert = "INSERT INTO users(UserName, PasswordHash, Email, ContactNumber) VALUES (?, ?, ?, ?)";
-        $stmt = $conn->prepare($insert);
-        $stmt->bind_param("ssss", $username, $password, $email, $contactnumber);
+        $stm = $conn->prepare($insert);
+        $stm->bind_param("ssss", $username, $password, $email, $contactnumber);
 
-        if ($stmt->execute()) {
+        if ($stm->execute()) {
             echo "<script>
-                swal({
+                Swal.fire({
                     title: 'Success!',
                     text: 'Registration successful!',
                     icon: 'success'
+                }).then(() => {
+                    window.location.href = 'LoginForm.php'; // Redirect to login page after 'OK' is clicked
                 });
             </script>";
         } else {
-            echo "Error: " . $stmt->error;
+            echo "Error: " . $stm->error;
         }
-        
-        $stmt->close();
+
+        $stm->close();
         $conn->close();
     } else {
         // Handle errors (display or log them)
         foreach ($errors as $error) {
-            echo $error . "<br>";
+            echo "<script>
+                Swal.fire({
+                    title: 'Error!',
+                    text: '$error',
+                    icon: 'error'
+                });
+            </script>";
         }
     }
 }
