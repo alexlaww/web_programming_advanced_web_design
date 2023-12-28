@@ -12,7 +12,7 @@ include "../Session.php"
     <link rel="stylesheet" href="../icon/iconfont.css">
     <link rel="stylesheet" href="../icon2/iconfont.css">
     <link rel="stylesheet" href="../Dashboard/icon2/iconfont.css">
-    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/x-icon" href="../img/Logo_Icon.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -22,20 +22,13 @@ include "../Session.php"
     <header>
         <div id="mySidepanel" class="sidepanel">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <form action="" id="search-bar-form">
-                <input type="text" id="search-bar" placeholder="Search...">
-                <button type="submit" id="search-bar-submit"><i class="iconfont icon-sousuo"></i></button>
-            </form>
-            <a href="../MainPage/MainPage.php"><i class="iconfont icon-book1">
-                    <p>Home</p>
-                </i></a>
             <a href="../Course/CoursePage.php"><i class="iconfont icon-book1">
                     <p>Course</p>
                 </i></a>
-            <a href="../Quiz/QuizList.html"><i class="iconfont icon-shijuan">
+            <a href="../Quiz/QuizList.php"><i class="iconfont icon-shijuan">
                     <p>Quiz</p>
                 </i></a>
-            <a href="../ShoppingCart/ShoppingCart.html"><i class="iconfont icon-31gouwuchexuanzhong">
+            <a href="../ShoppingCart/ShoppingCart.php"><i class="iconfont icon-31gouwuchexuanzhong">
                     <p>Shopping Cart</p>
                 </i></a>
             <a href="../UserProfile/UserProfile.php"><i class="iconfont icon-user">
@@ -77,13 +70,13 @@ include "../Session.php"
             }
         </script>
         <div class="left-bar">
-            <div id="logo">LOGO</div>
+            <div><img src="../img/Logo_Icon.png" alt="Logo" id="logo"></div>
             <ul class="menu">
                 <li class="item">Category<span></span>
                     <ul>
                         <li onclick="window.location.href = '../MainPage/MainPage.php'">Home</li>
                         <li onclick="window.location.href = '../Course/CoursePage.php'">Course</li>
-                        <li onclick="window.location.href = '../Quiz/QuizList.html'">Quiz</li>
+                        <li onclick="window.location.href = '../Quiz/QuizList.php'">Quiz</li>
                     </ul>
                 </li>
                 <li class="item">About<span></span>
@@ -119,13 +112,9 @@ include "../Session.php"
             });
         </script>
         <div class="right-bar">
-            <form action="" id="search-bar-form">
-                <input type="text" id="search-bar" placeholder="Search...">
-                <button type="submit" id="search-bar-submit"><i class="iconfont icon-sousuo"></i></button>
-            </form>
             <i class="iconfont icon-youxiang" onclick="window.location.href='../Mailbox/Mailbox.php'"></i>
             <i class="iconfont icon-31gouwuchexuanzhong"
-                onclick="window.location.href='../ShoppingCart/ShoppingCart.html'"></i>
+                onclick="window.location.href='../ShoppingCart/ShoppingCart.php'"></i>
             <i class="iconfont icon-user" onclick="window.location.href='../UserProfile/UserProfile.php'"></i>
             <i class="iconfont icon-Logout" onclick="window.location.href='../Logout.php'"></i>
         </div>
@@ -187,7 +176,7 @@ include "../Session.php"
         <div class="introduce-container">
             <p>Simple online learning system assignments from</p>
             <div style="display: flex;">
-                <img src="../img/new-era-university-college.png" alt="New Era University College">
+                <img src="../img/Logo.png" alt="New Era">
             </div>
         </div>
         <script>

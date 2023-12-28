@@ -8,6 +8,7 @@ include 'find-index.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo_Icon.png">
     <link rel="stylesheet" type="text/css" href="UserProfile.css">
     <link rel="stylesheet" href="../icon/iconfont.css">
 </head>
@@ -18,8 +19,8 @@ include 'find-index.php';
             <button>Profile</button>
             <button onclick="window.location.href='../UserResume/UserResume.php'"
                 script="window.location.replace('../UserResume/UserRusume.php')">Resume</button>
-            <button onclick="window.location.href='../UserHistory/UserHistory.html'"
-                script="window.location.replace('../UserHistory/UserHistory.html')">History</button>
+            <button onclick="window.location.href='../UserHistory/UserHistory.php'"
+                script="window.location.replace('../UserHistory/UserHistory.php')">History</button>
         </div>
     </div>
     <img src="<?php echo $image; ?>" alt="User Image" class="user-img">
@@ -86,7 +87,7 @@ include 'find-index.php';
             <br>
             <label for="About"><b>About Me</b></label>
             <br>
-            <textarea name="About" id="About" cols="30rem" rows="10"><?php echo $about; ?></textarea>
+            <textarea name="About" id="About" cols="30rem" rows="10" style="padding: 10px"><?php echo $about; ?></textarea>
             <br>
             <button type="submit" name="save"
                 style="width: 20rem; height: 5rem; border: none; background-color: rgb(255, 140, 0);">Save</button>

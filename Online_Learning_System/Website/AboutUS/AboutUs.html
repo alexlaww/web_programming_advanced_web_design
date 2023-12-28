@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo_Icon.png">
     <link rel="stylesheet" type="text/css" href="AboutUs.css">
     <link rel="stylesheet" href="../icon/iconfont.css">
     <link rel="stylesheet" href="../icon2/iconfont.css">
@@ -22,20 +23,16 @@
     <header>
         <div id="mySidepanel" class="sidepanel">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <form action="" id="search-bar-form">
-                <input type="text" id="search-bar" placeholder="Search...">
-                <button type="submit" id="search-bar-submit"><i class="iconfont icon-sousuo"></i></button>
-            </form>
             <a href="../MainPage/MainPage.php"><i class="iconfont icon-book1">
                     <p>Home</p>
                 </i></a>
             <a href="../Course/CoursePage.php"><i class="iconfont icon-book1">
                     <p>Course</p>
                 </i></a>
-            <a href="../Quiz/QuizList.html"><i class="iconfont icon-shijuan">
+            <a href="../Quiz/QuizList.php"><i class="iconfont icon-shijuan">
                     <p>Quiz</p>
                 </i></a>
-            <a href="../ShoppingCart/ShoppingCart.html"><i class="iconfont icon-31gouwuchexuanzhong">
+            <a href="../ShoppingCart/ShoppingCart.php"><i class="iconfont icon-31gouwuchexuanzhong">
                     <p>Shopping Cart</p>
                 </i></a>
             <a href="../UserProfile/UserProfile.php"><i class="iconfont icon-user">
@@ -43,9 +40,6 @@
                 </i></a>
             <a href="../ContactUs/ContactUs.php"><i class="iconfont icon-dianhua">
                     <p>Contact Us</p>
-                </i></a>
-            <a href="../AboutUS/AboutUs.html"><i class="iconfont icon-guanyuwomen">
-                    <p>About Us</p>
                 </i></a>
             <a href="../Lecturer/AboutTheTutor.php"><i class="iconfont icon-xuexiao">
                     <p>Tutor</p>
@@ -83,7 +77,7 @@
                     <ul>
                         <li onclick="window.location.href = '../MainPage/MainPage.php'">Home</li>
                         <li onclick="window.location.href = '../Course/CoursePage.php'">Course</li>
-                        <li onclick="window.location.href = '../Quiz/QuizList.html'">Quiz</li>
+                        <li onclick="window.location.href = '../Quiz/QuizList.php'">Quiz</li>
                     </ul>
                 </li>
                 <li class="item">About<span></span>
@@ -119,13 +113,9 @@
             });
         </script>
         <div class="right-bar">
-            <form action="" id="search-bar-form">
-                <input type="text" id="search-bar" placeholder="Search...">
-                <button type="submit" id="search-bar-submit"><i class="iconfont icon-sousuo"></i></button>
-            </form>
             <i class="iconfont icon-youxiang" onclick="window.location.href='../Mailbox/Mailbox.php'"></i>
             <i class="iconfont icon-31gouwuchexuanzhong"
-                onclick="window.location.href='../ShoppingCart/ShoppingCart.html'"></i>
+                onclick="window.location.href='../ShoppingCart/ShoppingCart.php'"></i>
             <i class="iconfont icon-user" onclick="window.location.href='../UserProfile/UserProfile.php'"></i>
             <i class="iconfont icon-Logout" onclick="window.location.href='../Logout.php'"></i>
         </div>
@@ -157,7 +147,11 @@
                     <div class="logo-image">LOGO</div>
                 </div>
                 <div class="Aboutus-content">
-                    <p>About Us content</p>
+                    <p>"Welcome to New Era Online Learning System, where learning knows no bounds! We're passionate
+                        about empowering
+                        individuals to unlock their potential through accessible, innovative online education. Our
+                        platform offers a diverse range of courses curated by experts, designed to inspire, challenge,
+                        and ignite curiosity."</p>
                     <p></p>
                 </div>
             </div>
@@ -191,10 +185,44 @@
                     <div class="student-evaluate">
                         <div class="student-intro">
                             <div>
+                                <img src="../img/1699588927143.jpg" alt="LEONG">
+                            </div>
+                            <div class="student-name">
+                                <p>LEONG WEI JUN</p>
+                            </div>
+                        </div>
+                        <div class="student-evaluation-content">
+                            <p>I'm LEONG WEI JUN, Study in the Diploma Course in Web Development at New Era University
+                                College. I'm responsible for designing, coding and managing this website. Also designed
+                                and compiled the database.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="student-evaluate">
+                        <div class="student-intro">
+                            <div class="student-image">
                                 <img src="" alt="">
                             </div>
                             <div class="student-name">
-                                <p>Name1</p>
+                                <p>ROY NG RUEY JYH</p>
+                            </div>
+                        </div>
+                        <div class="student-evaluation-content">
+                            <p>I'm NG RUEY JYH, Study in the Diploma Course in E-Commerce at New Era University College.
+                                I'm responsible for designing, coding and managing this website. Also designed and
+                                compiled the database.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="student-evaluate">
+                        <div class="student-intro">
+                            <div class="student-image">
+                                <img src="" alt="">
+                            </div>
+                            <div class="student-name">
+                                <p>LEE JUN HO</p>
                             </div>
                         </div>
                         <div class="student-evaluation-content">
@@ -209,37 +237,7 @@
                                 <img src="" alt="">
                             </div>
                             <div class="student-name">
-                                <p>Name2</p>
-                            </div>
-                        </div>
-                        <div class="student-evaluation-content">
-                            <p>Student evaluation content</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="student-evaluate">
-                        <div class="student-intro">
-                            <div class="student-image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="student-name">
-                                <p>Name3</p>
-                            </div>
-                        </div>
-                        <div class="student-evaluation-content">
-                            <p>Student evaluation content</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="student-evaluate">
-                        <div class="student-intro">
-                            <div class="student-image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="student-name">
-                                <p>Name4</p>
+                                <p>ERIC CHONG WAI</p>
                             </div>
                         </div>
                         <div class="student-evaluation-content">

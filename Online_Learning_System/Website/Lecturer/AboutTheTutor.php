@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About The Tutor</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo_Icon.png">
     <link rel="stylesheet" type="text/css" href="AboutTheTutor.css">
     <link rel="stylesheet" href="../icon/iconfont.css">
     <link rel="stylesheet" href="../icon2/iconfont.css">
@@ -15,20 +16,16 @@
     <header>
         <div id="mySidepanel" class="sidepanel">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <form action="" id="search-bar-form">
-                <input type="text" id="search-bar" placeholder="Search...">
-                <button type="submit" id="search-bar-submit"><i class="iconfont icon-sousuo"></i></button>
-            </form>
             <a href="../MainPage/MainPage.php"><i class="iconfont icon-book1">
                     <p>Home</p>
                 </i></a>
             <a href="../Course/CoursePage.php"><i class="iconfont icon-book1">
                     <p>Course</p>
                 </i></a>
-            <a href="../Quiz/QuizList.html"><i class="iconfont icon-shijuan">
+            <a href="../Quiz/QuizList.php"><i class="iconfont icon-shijuan">
                     <p>Quiz</p>
                 </i></a>
-            <a href="../ShoppingCart/ShoppingCart.html"><i class="iconfont icon-31gouwuchexuanzhong">
+            <a href="../ShoppingCart/ShoppingCart.php"><i class="iconfont icon-31gouwuchexuanzhong">
                     <p>Shopping Cart</p>
                 </i></a>
             <a href="../UserProfile/UserProfile.php"><i class="iconfont icon-user">
@@ -39,9 +36,6 @@
                 </i></a>
             <a href="../AboutUS/AboutUs.html"><i class="iconfont icon-guanyuwomen">
                     <p>About Us</p>
-                </i></a>
-            <a href="../Lecturer/AboutTheTutor.php"><i class="iconfont icon-xuexiao">
-                    <p>Tutor</p>
                 </i></a>
             <a href="../Comment/Comment.php"><i class="iconfont icon-comment">
                     <p>Comment</p>
@@ -76,7 +70,7 @@
                     <ul>
                         <li onclick="window.location.href = '../MainPage/MainPage.php'">Home</li>
                         <li onclick="window.location.href = '../Course/CoursePage.php'">Course</li>
-                        <li onclick="window.location.href = '../Quiz/QuizList.html'">Quiz</li>
+                        <li onclick="window.location.href = '../Quiz/QuizList.php'">Quiz</li>
                     </ul>
                 </li>
                 <li class="item">About<span></span>
@@ -112,13 +106,9 @@
             });
         </script>
         <div class="right-bar">
-            <form action="" id="search-bar-form">
-                <input type="text" id="search-bar" placeholder="Search...">
-                <button type="submit" id="search-bar-submit"><i class="iconfont icon-sousuo"></i></button>
-            </form>
             <i class="iconfont icon-youxiang" onclick="window.location.href='../Mailbox/Mailbox.php'"></i>
             <i class="iconfont icon-31gouwuchexuanzhong"
-                onclick="window.location.href='../ShoppingCart/ShoppingCart.html'"></i>
+                onclick="window.location.href='../ShoppingCart/ShoppingCart.php'"></i>
             <i class="iconfont icon-user" onclick="window.location.href='../UserProfile/UserProfile.php'"></i>
             <i class="iconfont icon-Logout" onclick="window.location.href='../Logout.php'"></i>
         </div>
@@ -130,20 +120,20 @@
             <p class="declaration">Our leadership team has one goal: to help learners quickly learn knowledge in
                 different fields and develop their abilities.</p>
             <div class="tutorflex">
-                <?php 
+                <?php
                 include "../ConnectDB.php";
                 $sql = "SELECT * FROM lecturer";
                 $result = mysqli_query($conn, $sql);
 
                 if (!$result) {
-                    die ("Invalid Query" . $conn->error);
+                    die("Invalid Query" . $conn->error);
                 }
 
-                while ($row = $result->fetch_assoc()){
+                while ($row = $result->fetch_assoc()) {
                     $imageFolder = '../Dashboard/Lecturer/';
                     $imagePath = $imageFolder . $row['LecturerImage'];
 
-                    echo "<div class='tutorDiv'>
+                    echo "<div class='tutorDiv'onclick=\"window.location.href='../LecturerDetail/LecturerDetail.php?LecturerID={$row['LecturerID']}'\">
                             <img src='$imagePath' alt='Lecturer'>
                             <h1>Lecturer Name: {$row['LecturerName']}</h1>
                             <h2>Teaching Subject: {$row['CourseName']}</h2>

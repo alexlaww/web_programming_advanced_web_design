@@ -90,7 +90,7 @@ if (isset($_POST['AddCourse'])) {
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Coure Price</label>
+                <label class="col-sm-3 col-form-label">Course Price</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="CoursePrice" value="<?php echo $CoursePrice; ?>">
                 </div>
@@ -106,7 +106,7 @@ if (isset($_POST['AddCourse'])) {
 
                         // Check if the query was successful
                         if (mysqli_num_rows($result1) > 0) {
-                            echo "<option value='0'selected disabled>Please Select Lecturer</option>";
+                            echo "<option value='0'selected disabled>Please Select Category</option>";
                             // Loop through the result and display the options
                             while ($row = mysqli_fetch_assoc($result1)) {
                                 // Get the category ID and name from the result

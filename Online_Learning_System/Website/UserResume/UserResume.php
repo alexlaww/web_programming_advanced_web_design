@@ -8,6 +8,7 @@ include 'find-index.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Resume</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo_Icon.png">
     <link rel="stylesheet" type="text/css" href="UserResume.css">
 </head>
 
@@ -17,8 +18,8 @@ include 'find-index.php';
             <button onclick="window.location.href='../UserProfile/UserProfile.php'"
                 script="window.location.replace('../UserProfile/UserProfile.php')">Profile</button>
             <button>Resume</button>
-            <button onclick="window.location.href='../UserHistory/UserHistory.html'"
-                script="window.location.replace('../UserHistory/UserHistory.html')">History</button>
+            <button onclick="window.location.href='../UserHistory/UserHistory.php'"
+                script="window.location.replace('../UserHistory/UserHistory.php')">History</button>
         </div>
     </div>
     <img src="<?php echo $image; ?>" alt="User Image" class="user-img">

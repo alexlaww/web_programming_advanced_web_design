@@ -9,7 +9,6 @@ $sql = "SELECT * FROM comments ORDER BY PostDate DESC";
 //execute the query and store the result in the $result variable
 $result = $conn->query($sql);
 
-//function to get the username from a userID
 function getUsernameFromUserID($conn, $userID)
 {
 
@@ -40,6 +39,8 @@ function getUsernameFromUserID($conn, $userID)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment Board</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo_Icon.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
@@ -64,10 +65,10 @@ function getUsernameFromUserID($conn, $userID)
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../Course/CoursePage.html" style="font-size: 20px;">Course</a>
+                        <a class="nav-link" href="../Course/CoursePage.php" style="font-size: 20px;">Course</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Quiz/QuizList.html" style="font-size: 20px;">Quiz</a>
+                        <a class="nav-link" href="../Quiz/QuizList.php" style="font-size: 20px;">Quiz</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../ContactUs/ContactUs.php" style="font-size: 20px;">Contact</a>
@@ -108,10 +109,9 @@ function getUsernameFromUserID($conn, $userID)
                     <label for="comment" class="form-label">Content:</label>
                     <textarea class="form-control" id="comment" name="comment" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Publish</button>
             </form>
         </div>
-
         <div class="comment-box mt-4">
             <h3>Comment List</h3>
             <ul id="commentList" class="list-group">

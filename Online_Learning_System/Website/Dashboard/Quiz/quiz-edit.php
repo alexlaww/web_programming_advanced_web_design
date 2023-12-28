@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $QuizImage = "quiz-image/" . $filename;
     }
     //store the values from the POST request in the variables
-    
+
     $QuizID = $_GET['QuizID'];
     $QuizID = $_POST['QuizID'];
     $QuizName = $_POST['QuizName'];
@@ -73,7 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         //update the values of the QuizID, QuizImage, QuizName, CategoryID, and CategoryName in the database
         $sql = "UPDATE quiz SET QuizImage='$QuizImage', QuizName = '$QuizName', CategoryID = '$CategoryID', CategoryName = '$CategoryName' WHERE QuizID = '$QuizID'";
         $result = $conn->query($sql);
-
         //check if the result is empty
         if (!$result) {
             //if empty, set the error message and break out of the loop
@@ -130,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         //Check if the query was successful
                         if (mysqli_num_rows($result1) > 0) {
                             //Loop through the result set
-                            echo "<option value='0' selected disabled>Please Select Lecturer</option>";
+                            echo "<option value='0' selected disabled>Please Select Category</option>";
                             while ($row = mysqli_fetch_assoc($result1)) {
                                 //Store the category ID and name in the $Category_ID and $Category_Name variables respectively
                                 $Category_ID = $row['CategoryID'];
